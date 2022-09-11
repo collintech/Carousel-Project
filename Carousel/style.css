@@ -1,0 +1,81 @@
+body,
+html {
+    background-image: linear-gradient(to bottom, rgb(224, 224, 27), red, #48c516, #0a0ac4);
+    background-blend-mode: darken;
+    background-clip: content-box;
+    background-origin: content-box;
+    background-position: 10% 50%;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
+
+}
+
+.carousel .carousel-item span {
+    height: .9em;
+    width: .9em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    width: 100%;
+    object-fit: contain;
+    display: none;
+    height: 100%;
+    font-weight: bold;
+}
+
+.carousel .carousel-item-visible {
+    display: block;
+}
+
+
+
+.carousel-action {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slides 1s;
+
+}
+
+
+@keyframes slides {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.action-btn {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 2em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#carousel-btn-prev {
+    margin-left: .5em;
+
+
+}
+
+#carousel-btn-next {
+    margin-right: .5em;
+}
